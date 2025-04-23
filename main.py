@@ -23,4 +23,5 @@ async def crawl_news(data: LinkRequest):
     title = soup.title.string.strip() if soup.title else "No Title"
     content_meta = soup.find('meta', {'name': 'description'})
     content = content_meta['content'].strip() if content_meta else "No Content"
-    image_meta = soup.find('meta', property='og:image_
+    image_meta = soup.find('meta', property='og:image')
+
